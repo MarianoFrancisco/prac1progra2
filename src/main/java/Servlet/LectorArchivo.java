@@ -74,8 +74,10 @@ public class LectorArchivo extends HttpServlet {
         CargarArchivos cargar = new CargarArchivos();
         try {
             cargar.leer(fileContent);
+            response.sendRedirect("fabrica.jsp");
         } catch (ParseException ex) {
             Logger.getLogger(LectorArchivo.class.getName()).log(Level.SEVERE, null, ex);
+            response.sendRedirect("fabrica.jsp");
         } 
     }
     /**

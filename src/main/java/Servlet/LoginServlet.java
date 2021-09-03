@@ -5,10 +5,13 @@
  */
 package Servlet;
 
+import CreadorObjetos.Almacenador;
+import static CreadorObjetos.Almacenador.almacenador;
 import MySQL.ConexionBD;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
+import java.time.LocalDate;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,13 +23,13 @@ import javax.swing.JOptionPane;
  * @author Mariano
  */
 public class LoginServlet extends HttpServlet {
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
-        String usuario=request.getParameter("usuario");
+        String usuario=request.getParameter("usuarioInicial");
         String password = request.getParameter("password");
         try{
             //open connetcion
@@ -40,13 +43,14 @@ public class LoginServlet extends HttpServlet {
             }
             Statement st=cn.createStatement();
             ResultSet rs=st.executeQuery("select * from usuario where nombre_usuario='"+usuario+"'");
-            String datos[]= new String[3];   
+            String datos[]= new String[3];
+            //
             if(rs.next()){       
                 datos[0]=rs.getString(1);
                 datos[1]=rs.getString(2);
                 datos[2]=rs.getString(3);
                 if(Integer.parseInt(datos[2])==1&&datos[1].equals(password)){
-                    response.sendRedirect("fabrica.jsp");
+                    response.sendRedirect("fabrica.jsp?usuarioInicial="+usuario);
                 }else if(Integer.parseInt(datos[2])==2&&datos[1].equals(password)){
                     response.sendRedirect("punto_venta.jsp");
                 }else if(Integer.parseInt(datos[2])==3&&datos[1].equals(password)){

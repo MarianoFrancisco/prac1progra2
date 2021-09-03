@@ -10,7 +10,15 @@
     </servlet>
     <servlet>
         <servlet-name>InformacionPieza</servlet-name>
-        <servlet-class>Servlet.InformacionPieza</servlet-class>
+        <servlet-class>CondicionalesFabrica.InformacionPieza</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProcesoEnsamble</servlet-name>
+        <servlet-class>CondicionalesFabrica.ProcesoEnsamble</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InsertarMueble</servlet-name>
+        <servlet-class>CondicionalesFabrica.InsertarMueble</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>InformacionPieza</servlet-name>
         <url-pattern>/InformacionPieza</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcesoEnsamble</servlet-name>
+        <url-pattern>/ProcesoEnsamble</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InsertarMueble</servlet-name>
+        <url-pattern>/InsertarMueble</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

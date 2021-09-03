@@ -1,11 +1,14 @@
 MySQL\ConexionBD.class
 Servlet\LectorArchivo.class
+CondicionalesFabrica\EnsamblarMueble.class
+CondicionalesFabrica\InformacionPieza.class
 CreadorObjetos\CrearEnsamblar.class
-Servlet\InformacionPieza.class
+CreadorObjetos\Almacenador.class
 Objetos\Ensamble.class
 Objetos\Pieza.class
 com\mycompany\prac1progra2\Restricciones\CondicionalLogin.class
 com\mycompany\prac1progra2\Restricciones\ConstructorLlamados.class
+CondicionalesFabrica\ProcesoEnsamble.class
 CreadorObjetos\CrearCliente.class
 CreadorObjetos\CrearEnsamble.class
 CreadorObjetos\CrearPieza.class
@@ -14,6 +17,7 @@ com\mycompany\prac1progra2\Restricciones\CargarArchivos.class
 Servlet\LoginServlet.class
 CreadorObjetos\CrearMueble.class
 Objetos\Mueble.class
+CondicionalesFabrica\InsertarMueble.class
 Objetos\Ensamblar.class
 CreadorObjetos\CrearUsuario.class
 Objetos\Cliente.class
