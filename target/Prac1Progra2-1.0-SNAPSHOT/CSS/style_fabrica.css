@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/08/2021, 23:02:17
+    Author     : Mariano
+*/
+*{
+    /*estableciendo medidas*/
+    margin:0px;
+    padding: 0px;
+}
+body {
+    background-image: url(../Imagenes/fondoFabrica.jpg)
+}
+H1 { 
+    text-align: center;
+    padding-top: 20px;
+    color: #000000;
+    font-size: 60px;
+}
+#titulo{
+    background: #01FCF8;
+    width: 1280px;
+    height:100px;
+    margin:auto;
+    margin-top: 0px;
+}
+
