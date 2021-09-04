@@ -51,7 +51,7 @@
             <%
                 try{
                     st=cn.createStatement();
-                    rs=st.executeQuery("SELECT * FROM pieza;");
+                    rs=st.executeQuery("SELECT * FROM pieza");
             while(rs.next()){
                 %>
                 <tr>

@@ -24,8 +24,10 @@
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Error conectar a MySQL"+e);
             }
+            
             PreparedStatement st=null;
             String tipoPieza=request.getParameter("tipo_pieza");
+            JOptionPane.showMessageDialog(null, "pata"+tipoPieza);
             st=cn.prepareStatement("DELETE FROM pieza where tipo_pieza='"+tipoPieza+"'");
             st.executeUpdate();
             response.sendRedirect("informacion_pieza.jsp");

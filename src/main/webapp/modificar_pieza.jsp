@@ -61,6 +61,4 @@
            st.executeUpdate();
            response.sendRedirect("informacion_pieza.jsp");
        }
-       
-       
 %>

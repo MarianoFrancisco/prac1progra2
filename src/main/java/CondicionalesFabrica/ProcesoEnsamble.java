@@ -54,7 +54,7 @@ public class ProcesoEnsamble extends HttpServlet {
                 usuarioInicial=request.getParameter("usuarioInicial");
                 ResultSet rs1=st1.executeQuery("select * from ensamble where nombre_mueble='"+nombre_mueble+"'");
                 LocalDate.now();
-                       String datosPieza[]= new String[3];
+                    String datosPieza[]= new String[3];
                     String datosMueble[]= new String[3];
                     while(rs1.next()){    
                         datosMueble[0]=rs1.getString(2);//NOMBREMUEBLE

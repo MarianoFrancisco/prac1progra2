@@ -21,7 +21,6 @@
             String usuarioInicial=request.getParameter("usuarioInicial");
         %>
         <div id="titulo"><h1>Fabrica</h1></div>
-        
         <a class="btn btn-success btn-lg " style="margin-left:50px;" href="InformacionPiezas">Informacion de Piezas</a>
         <a class="btn btn-success btn-lg " style="margin-left:50px;" href="EnsamblarMueble?usuarioInicial=<%=usuarioInicial%>">Ensamblar Mueble</a>
         <a class="btn btn-success btn-lg " style="margin-left:50px;" href="InformacionPiezas">Consulta Piezas</a>

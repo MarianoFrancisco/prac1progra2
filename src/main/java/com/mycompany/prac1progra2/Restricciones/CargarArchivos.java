@@ -20,7 +20,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
 import javax.swing.JOptionPane;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -58,7 +57,8 @@ public class CargarArchivos {
         while ((linea = leerTextoArchivo.readLine()) != null) {   
             //con la linea leida, separamos los campos
             String[] espacio = separarEspacio(linea);
-            //pasamos el texto a objeto
+            //pasamadLine()) != null) {   
+            //con la linea leida, separamos los camposos el texto a objeto
             if (linea.startsWith("USUARIO(")) {
                 Usuario usuario=CrearUsuario.crearUsuario(espacio);//creamos un usuario
                 if (usuario != null) {

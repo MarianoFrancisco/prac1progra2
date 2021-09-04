@@ -28,6 +28,8 @@
             <form action="ProcesoEnsamble?usuarioInicial=<%=usuarioInicial%>" method="post" class="form-control" style="width: 500px; height: 400px">
                 Nombre Mueble:
                 <input type="text" name="txtMueble" class="form-control"/><br>
+                Precio Mueble:
+                <input type="text" name="txtPrecio" class="form-control"/><br>
                 <input type="submit" value="Guardar" class="btn btn-primary btn-lg"/>
                 <a href="fabrica.jsp">Regresar</a>
             </form>
