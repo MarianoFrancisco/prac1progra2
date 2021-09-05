@@ -19,6 +19,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%
+            String usuarioInicial=request.getParameter("usuarioInicial");
+        %>
         <div id="titulo"><h1>Informacion piezas</h1></div>
         <hr>
         <%
@@ -34,8 +37,9 @@
             ResultSet rs=null;
 
         %>
-            <a class="btn btn-success btn-lg" href="fabrica.jsp">Regresar</a>
-            <a class="btn btn-success btn-lg " style="margin-left:870px;" href="añadir.jsp">Crear Pieza</a>
+        
+            <a class="btn btn-success btn-lg" href="fabrica.jsp?usuarioInicial=<%=usuarioInicial%>">Regresar</a>
+            <a class="btn btn-success btn-lg " style="margin-left:870px;" href="añadir.jsp?usuarioInicial=<%=usuarioInicial%>">Crear Pieza</a>
             <br>
             <br>             
         <table class="table table-bordered">
@@ -59,8 +63,8 @@
                     <td class="text-center"><%=rs.getString(2) %></td>
                     <td class="text-center"><%=rs.getInt(3) %></td>
                     <td class="text-center">
-                        <a href="modificar_pieza.jsp?tipo_pieza=<%=rs.getString(1) %>" class="btn btn-primary">Modificar</a>
-                        <a href="suprimir_pieza.jsp?tipo_pieza=<%=rs.getString(1) %>" class="btn btn-danger">Suprimir</a>
+                        <a href="modificar_pieza.jsp?tipo_pieza=<%=rs.getString(1) %>&usuarioInicial=<%=usuarioInicial%>"" class="btn btn-primary">Modificar</a>
+                        <a href="suprimir_pieza.jsp?tipo_pieza=<%=rs.getString(1) %>&usuarioInicial=<%=usuarioInicial%>" class="btn btn-danger">Suprimir</a>
                     </td>
                 </tr>
                 <%

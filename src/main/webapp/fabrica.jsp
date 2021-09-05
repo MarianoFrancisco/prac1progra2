@@ -4,7 +4,7 @@
     Author     : Mariano
 --%>
 
-<%@page import="CondicionalesFabrica.AñadirMueble"%>
+
 <%@page import="javax.swing.JOptionPane"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,11 +21,11 @@
             String usuarioInicial=request.getParameter("usuarioInicial");
         %>
         <div id="titulo"><h1>Fabrica</h1></div>
-        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="InformacionPiezas">Informacion de Piezas</a>
+        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="InformacionPiezas?usuarioInicial=<%=usuarioInicial%>">Informacion de Piezas</a>
         <a class="btn btn-success btn-lg " style="margin-left:50px;" href="EnsamblarMueble?usuarioInicial=<%=usuarioInicial%>">Ensamblar Mueble</a>
-        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="InformacionPiezas">Consulta Piezas</a>
-        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="InformacionPiezas">Consulta Muebles</a>
-        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="InformacionPiezas">Piezas a agotarse</a> 
+        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="consulta_pieza.jsp?usuarioInicial=<%=usuarioInicial%>">Consulta Piezas</a>
+        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="consulta_mueble.jsp?usuarioInicial=<%=usuarioInicial%>">Consulta Muebles</a>
+        <a class="btn btn-success btn-lg " style="margin-left:50px;" href="pieza_agotarse.jsp?usuarioInicial=<%=usuarioInicial%>">Piezas a agotarse</a> 
         <form action="LectorArchivo" method="POST" enctype="multipart/form-data">
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
             <input class="btn btn-warning" style="margin-left:500px;" type="file" name="file" />          

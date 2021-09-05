@@ -1,14 +1,12 @@
 <%-- 
-    Document   : informacion_pieza
-    Created on : 30/08/2021, 23:58:42
+    Document   : pieza_agotarse
+    Created on : 4/09/2021, 18:23:54
     Author     : Mariano
 --%>
 
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
 <%@page import="javax.swing.JOptionPane"%>
 <%@page import="MySQL.ConexionBD"%>
-<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,7 +20,7 @@
         <%
             String usuarioInicial=request.getParameter("usuarioInicial");
         %>
-        <div id="titulo"><h1>Informacion piezas</h1></div>
+        <div id="titulo"><h1>Consulta Piezas Por Agotarse</h1></div>
         <hr>
         <%
             Connection cn=null;
@@ -35,37 +33,32 @@
             
             Statement st=null;
             ResultSet rs=null;
-
-        %>
-        
-            <a class="btn btn-success btn-lg" href="fabrica.jsp?usuarioInicial=<%=usuarioInicial%>">Regresar</a>
-            <a class="btn btn-success btn-lg " style="margin-left:870px;" href="añadir.jsp?usuarioInicial=<%=usuarioInicial%>">Crear Pieza</a>
-            <br>
-            <br>             
+        %> 
+            <a class="btn btn-success btn-lg" href="fabrica.jsp?usuarioInicial=<%=usuarioInicial%>">Regresar</a>   
+            <br> 
         <table class="table table-bordered">
         <thead>
             <tr>
             <th >Tipo Pieza</th>
-            <th class="text-center">Costo</th>
             <th class="text-center">Cantidad</th>
-            <th class="text-center">Manipulacion</th>
+            <th class="text-center">Estado Pieza</th>
             </tr>
         </thead> 
         <tbody>
             <%
                 try{
                     st=cn.createStatement();
-                    rs=st.executeQuery("SELECT * FROM pieza");
+                    rs=st.executeQuery("SELECT * FROM pieza WHERE cantidad<=3");
             while(rs.next()){
                 %>
                 <tr>
                     <th scope="row"><%=rs.getString(1) %></th>
-                    <td class="text-center"><%=rs.getString(2) %></td>
                     <td class="text-center"><%=rs.getInt(3) %></td>
-                    <td class="text-center">
-                        <a href="modificar_pieza.jsp?tipo_pieza=<%=rs.getString(1) %>&usuarioInicial=<%=usuarioInicial%>"" class="btn btn-primary">Modificar</a>
-                        <a href="suprimir_pieza.jsp?tipo_pieza=<%=rs.getString(1) %>&usuarioInicial=<%=usuarioInicial%>" class="btn btn-danger">Suprimir</a>
-                    </td>
+                    <%if(rs.getInt(3)>0&&rs.getInt(3)<=3){%>
+                        <td class="text-center">Pieza por Agotarse</td>
+                        <% }else if(rs.getInt(3)==0){%>
+                            <td class="text-center">Pieza Agotada</td>
+                        <%}%>
                 </tr>
                 <%
                     }

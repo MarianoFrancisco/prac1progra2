@@ -58,7 +58,8 @@ public class InformacionPieza extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("informacion_pieza.jsp").forward(request, response);
+        String usuarioInicial=request.getParameter("usuarioInicial");
+        request.getRequestDispatcher("informacion_pieza.jsp?nombreInicial="+usuarioInicial).forward(request, response);
     }
 
     /**

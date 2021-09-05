@@ -16,6 +16,9 @@
     </head>
     <body>
         <%
+            String usuarioInicial=request.getParameter("usuarioInicial");
+        %>
+        <%
            //conectamos
             Connection cn=null;
             try{
@@ -30,7 +33,7 @@
             JOptionPane.showMessageDialog(null, "pata"+tipoPieza);
             st=cn.prepareStatement("DELETE FROM pieza where tipo_pieza='"+tipoPieza+"'");
             st.executeUpdate();
-            response.sendRedirect("informacion_pieza.jsp");
+            response.sendRedirect("informacion_pieza.jsp?usuarioInicial="+usuarioInicial);
         %>
     </body>
     

@@ -17,6 +17,9 @@
     </head>
     <body>
         <%
+            String usuarioInicial=request.getParameter("usuarioInicial");
+        %>
+        <%
            //conectamos
             Connection cn=null;
             try{
@@ -45,13 +48,15 @@
                  <br>
                 <input type="submit" value="Guardar" class="btn btn-primary btn-lg"/>
                 
-                <a href="informacion_pieza.jsp">Regresar</a>
+                <a href="informacion_pieza.jsp?usuarioInicial=<%=usuarioInicial%>">Regresar</a>
             </form>
             <%}%>
         </div>
     </body>
 </html>
+
 <%
+    
     String tipo_pieza,costo, cantidad;
        tipo_pieza=request.getParameter("txtPieza");
        costo=request.getParameter("txtCosto");
@@ -59,6 +64,6 @@
        if(tipo_pieza!=null && costo!=null && cantidad!=null){
            st=cn.prepareStatement("UPDATE pieza SET tipo_pieza='"+tipo_pieza+"', costo="+Double.parseDouble(costo)+", cantidad="+Integer.parseInt(cantidad)+" WHERE tipo_pieza='"+tipoPieza+"'");
            st.executeUpdate();
-           response.sendRedirect("informacion_pieza.jsp");
+           response.sendRedirect("informacion_pieza.jsp?usuarioInicial="+usuarioInicial);
        }
 %>

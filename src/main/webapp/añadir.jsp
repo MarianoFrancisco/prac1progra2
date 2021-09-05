@@ -16,6 +16,9 @@
         <link href="CSS/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>  
+        <%
+            String usuarioInicial=request.getParameter("usuarioInicial");
+        %>
         <div class="container">
             <h1>Crear Pieza</h1>
             <hr>
@@ -28,13 +31,14 @@
                 <input type="text" name="txtCantidad" class="form-control"/>
                 <br>
                 <input type="submit" value="Guardar" class="btn btn-primary btn-lg"/>
-                <a href="informacion_pieza.jsp">Regresar</a>
+                <a href="informacion_pieza.jsp?usuarioInicial=<%=usuarioInicial%>">Regresar</a>
             </form>
         </div>
         
         
     </body>
 </html>
+
 <%
            //conectamos
             Connection cn=null;
@@ -56,6 +60,6 @@
                 st.setInt(3, Integer.parseInt(cantidad));
                 st.executeUpdate();
                 JOptionPane.showMessageDialog(null, "agregamos");
-                response.sendRedirect("informacion_pieza.jsp");
+                response.sendRedirect("informacion_pieza.jsp?usuarioInicial="+usuarioInicial);
             }
 %>

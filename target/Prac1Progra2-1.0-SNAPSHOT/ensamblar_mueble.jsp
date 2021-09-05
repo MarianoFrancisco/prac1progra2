@@ -31,7 +31,7 @@
                 Precio Mueble:
                 <input type="text" name="txtPrecio" class="form-control"/><br>
                 <input type="submit" value="Guardar" class="btn btn-primary btn-lg"/>
-                <a href="fabrica.jsp">Regresar</a>
+                <a href="fabrica.jsp?usuarioInicial=<%=usuarioInicial%>>Regresar</a>
             </form>
         </div>
         
