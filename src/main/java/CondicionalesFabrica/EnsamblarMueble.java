@@ -60,7 +60,7 @@ public class EnsamblarMueble extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String usuarioInicial=request.getParameter("usuarioInicial");
-        request.getRequestDispatcher("ensamblar_mueble.jsp?nombreInicial="+usuarioInicial).forward(request, response);
+        request.getRequestDispatcher("fabrica/ensamblar_mueble.jsp?nombreInicial="+usuarioInicial).forward(request, response);
     }
 
     /**

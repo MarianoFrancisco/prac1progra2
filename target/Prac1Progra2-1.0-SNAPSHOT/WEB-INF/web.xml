@@ -20,6 +20,10 @@
         <servlet-name>InsertarMueble</servlet-name>
         <servlet-class>CondicionalesFabrica.InsertarMueble</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IngresarSalaVentas</servlet-name>
+        <servlet-class>CondicionalesFabrica.IngresarSalaVentas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>InsertarMueble</servlet-name>
         <url-pattern>/InsertarMueble</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresarSalaVentas</servlet-name>
+        <url-pattern>/IngresarSalaVentas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -69,15 +70,16 @@ public class LectorArchivo extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out=response.getWriter();
+        String usuarioInicial=request.getParameter("usuarioInicial");
         Part filePart = request.getPart("file");
         InputStream fileContent = filePart.getInputStream();
         CargarArchivos cargar = new CargarArchivos();
         try {
             cargar.leer(fileContent);
-            response.sendRedirect("fabrica.jsp");
+            response.sendRedirect("fabrica/fabrica.jsp?usuarioInicial="+usuarioInicial);
         } catch (ParseException ex) {
             Logger.getLogger(LectorArchivo.class.getName()).log(Level.SEVERE, null, ex);
-            response.sendRedirect("fabrica.jsp");
+            response.sendRedirect("fabrica/fabrica.jsp?usuarioInicial="+usuarioInicial);
         } 
     }
     /**

@@ -5,7 +5,6 @@
  */
 package CondicionalesFabrica;
 
-import static CreadorObjetos.Almacenador.almacenador;
 import MySQL.ConexionBD;
 import java.io.IOException;
 import java.sql.*;

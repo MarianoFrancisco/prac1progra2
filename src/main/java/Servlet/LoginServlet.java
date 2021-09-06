@@ -5,8 +5,7 @@
  */
 package Servlet;
 
-import CreadorObjetos.Almacenador;
-import static CreadorObjetos.Almacenador.almacenador;
+
 import MySQL.ConexionBD;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -50,11 +49,11 @@ public class LoginServlet extends HttpServlet {
                 datos[1]=rs.getString(2);
                 datos[2]=rs.getString(3);
                 if(Integer.parseInt(datos[2])==1&&datos[1].equals(password)){
-                    response.sendRedirect("fabrica.jsp?usuarioInicial="+usuario);
+                    response.sendRedirect("fabrica/fabrica.jsp?usuarioInicial="+usuario);
                 }else if(Integer.parseInt(datos[2])==2&&datos[1].equals(password)){
-                    response.sendRedirect("punto_venta.jsp");
+                    response.sendRedirect("ventas/ventas.jsp?usuarioInicial="+usuario);
                 }else if(Integer.parseInt(datos[2])==3&&datos[1].equals(password)){
-                    response.sendRedirect("financiero.jsp");
+                    response.sendRedirect("financiero/financiero.jsp?usuarioInicial="+usuario);
                 }else{
                     out.println("error");
                 }
