@@ -1,9 +1,9 @@
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\Servlet\LectorArchivo.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\Servlet\LoginServlet.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\com\mycompany\prac1progra2\Restricciones\CargarArchivos.java
-C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CondicionalesFabrica\ProcesoEnsamble.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CreadorObjetos\CrearEnsamblar.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CreadorObjetos\CrearPieza.java
+C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CondicionalesFabrica\EnsambladoProceso.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\Objetos\Mueble.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CondicionalesFabrica\InformacionPieza.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\Objetos\Cliente.java
@@ -16,5 +16,6 @@ C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\O
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CreadorObjetos\CrearMueble.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\Objetos\Pieza.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\MySQL\ConexionBD.java
+C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CondicionalesFabrica\ProcesoEnsambles.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CreadorObjetos\CrearCliente.java
 C:\Users\Maria\OneDrive\Documentos\NetBeansProjects\Prac1Progra2\src\main\java\CreadorObjetos\CrearUsuario.java

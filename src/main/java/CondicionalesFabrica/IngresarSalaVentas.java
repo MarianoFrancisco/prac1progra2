@@ -73,47 +73,33 @@ public class IngresarSalaVentas extends HttpServlet {
                     ConexionBD con = new ConexionBD();
                     cn = con.conexion();
                 }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, "Error conectar a MySQL"+e);
+                   
                 }
                 PreparedStatement st=null;
                 PreparedStatement ps=null;
-                Statement st1=cn.createStatement();
                 String nombre_mueble,usuarioInicial;
                 double precio;
-                int decision,id;
+                int id;
                 id=Integer.parseInt(request.getParameter("id"));
                 nombre_mueble=request.getParameter("nombre_mueble");
-                decision=Integer.parseInt(request.getParameter("decision"));
                 precio=Double.parseDouble(request.getParameter("precio"));
                 usuarioInicial=request.getParameter("usuarioInicial");
-                if(decision==0){
-                    ps=cn.prepareStatement("DELETE FROM mueble where nombre_mueble='"+nombre_mueble+"'");
-                    ps.executeUpdate();
-                    ps.close();
-                    st = cn.prepareStatement("INSERT INTO mueble_venta(nombre_mueble_venta,precio_venta) VALUES(?,?)");//Nos permite acercarnos a mysql
-                    st.setString(1, nombre_mueble);
-                    st.setDouble(2, precio);
-                    st.executeUpdate();
-                    st.close();
-                    response.sendRedirect("fabrica/enviar_sala_ventas.jsp?usuarioInicial="+usuarioInicial);
-                }else if(decision==1){
-                    ps=cn.prepareStatement("DELETE FROM ensamblar where numero_ensamble="+id);
-                    ps.executeUpdate();
-                    ps.close();
-                    st = cn.prepareStatement("INSERT INTO mueble_venta(nombre_mueble_venta,precio_venta) VALUES(?,?)");//Nos permite acercarnos a mysql
-                    st.setString(1, nombre_mueble);
-                    st.setDouble(2, precio);
-                    st.executeUpdate();
-                    st.close();
-                    response.sendRedirect("fabrica/enviar_sala_ventas.jsp?usuarioInicial="+usuarioInicial);
-                }
+                ps=cn.prepareStatement("DELETE FROM ensamblar where numero_ensamble="+id);
+                ps.executeUpdate();
+                ps.close();
+                st = cn.prepareStatement("INSERT INTO mueble_venta(nombre_mueble_venta,precio_venta) VALUES(?,?)");//Nos permite acercarnos a mysql
+                st.setString(1, nombre_mueble);
+                st.setDouble(2, precio);
+                st.executeUpdate();
+                response.sendRedirect("fabrica/enviar_sala_ventas.jsp?usuarioInicial="+usuarioInicial);
+
                 /**
                  * Returns a short description of the servlet.
                  *
                  * @return a String containing servlet description
                  */
             }catch(SQLException ex){
-                Logger.getLogger(ProcesoEnsamble.class.getName()).log(Level.SEVERE,null, ex);
+                Logger.getLogger(ProcesoEnsambles.class.getName()).log(Level.SEVERE,null, ex);
             }
     }
 

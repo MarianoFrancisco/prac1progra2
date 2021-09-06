@@ -14,7 +14,7 @@
     </servlet>
     <servlet>
         <servlet-name>ProcesoEnsamble</servlet-name>
-        <servlet-class>CondicionalesFabrica.ProcesoEnsamble</servlet-class>
+        <servlet-class>CondicionalesFabrica.ProcesoEnsambles</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>InsertarMueble</servlet-name>
@@ -23,6 +23,10 @@
     <servlet>
         <servlet-name>IngresarSalaVentas</servlet-name>
         <servlet-class>CondicionalesFabrica.IngresarSalaVentas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EnsambladoProceso</servlet-name>
+        <servlet-class>CondicionalesFabrica.EnsambladoProceso</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>IngresarSalaVentas</servlet-name>
         <url-pattern>/IngresarSalaVentas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnsambladoProceso</servlet-name>
+        <url-pattern>/EnsambladoProceso</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

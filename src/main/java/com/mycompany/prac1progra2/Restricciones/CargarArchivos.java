@@ -149,7 +149,6 @@ public class CargarArchivos {
             } else if (linea.startsWith("ENSAMBLAR_MUEBLE")) {
                 Ensamblar ensamblar=CrearEnsamblar.crearEnsamblar(espacio);//creamos un ensamblar
                 if (ensamblar != null) {
-                    LocalDate.parse("12/2000/2");
                     ensamblarS.add(ensamblar);//agregamos un ensamblar       
                 try {                   
                     subirBaseDatos = cn.prepareStatement("INSERT INTO ensamblar(nombre_mueble,nombre_usuario,fecha) VALUES(?,?,?)");//Nos permite acercarnos a mysql

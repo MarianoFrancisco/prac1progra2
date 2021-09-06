@@ -1,3 +1,4 @@
+CondicionalesFabrica\ProcesoEnsambles.class
 MySQL\ConexionBD.class
 Servlet\LectorArchivo.class
 CondicionalesFabrica\EnsamblarMueble.class
@@ -5,8 +6,8 @@ CondicionalesFabrica\InformacionPieza.class
 CreadorObjetos\CrearEnsamblar.class
 Objetos\Ensamble.class
 Objetos\Pieza.class
+CondicionalesFabrica\EnsambladoProceso.class
 CondicionalesFabrica\IngresarSalaVentas.class
-CondicionalesFabrica\ProcesoEnsamble.class
 CreadorObjetos\CrearCliente.class
 CreadorObjetos\CrearEnsamble.class
 CreadorObjetos\CrearPieza.class

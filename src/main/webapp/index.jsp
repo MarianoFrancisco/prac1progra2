@@ -3,7 +3,6 @@
     Created on : 22/08/2021, 13:11:25
     Author     : Mariano
 --%>
-<%@page import="CreadorObjetos.Almacenador"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>  

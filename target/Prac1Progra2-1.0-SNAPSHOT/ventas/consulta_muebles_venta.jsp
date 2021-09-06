@@ -52,8 +52,8 @@
             while(rs.next()){
                 %>
                 <tr>
-                    <th scope="row"><%=rs.getString(1) %></th>
-                    <td class="text-center"><%=rs.getDouble(2) %></td>
+                    <th scope="row"><%=rs.getString(2) %></th>
+                    <td class="text-center"><%=rs.getDouble(3) %></td>
                 </tr>
                 <%
                     }

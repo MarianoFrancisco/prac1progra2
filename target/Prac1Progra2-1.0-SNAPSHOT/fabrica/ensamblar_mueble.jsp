@@ -4,7 +4,6 @@
     Author     : Mariano
 --%>
 
-<%@page import="CreadorObjetos.Almacenador"%>
 <%@page import="Servlet.LoginServlet"%>
 <%@page import="javax.swing.JOptionPane"%>
 <%@page import="MySQL.ConexionBD"%>
@@ -25,7 +24,7 @@
         <div class="container">
             <h1>Ensamble de mueble</h1>
             <hr>
-            <form action="../ProcesoEnsamble?usuarioInicial=<%=usuarioInicial%>" method="post" class="form-control" style="width: 500px; height: 400px">
+            <form action="EnsambladoProceso?usuarioInicial=<%=usuarioInicial%>" method="POST" class="form-control" style="width: 500px; height: 400px">
                 Nombre Mueble:
                 <input type="text" name="txtMueble" class="form-control"/><br>
                 Precio Mueble:

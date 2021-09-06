@@ -51,23 +51,7 @@
         <tbody>
             <%
                 try{
-                    st=cn.createStatement();
-                    rs=st.executeQuery("SELECT * FROM mueble");
-                    int valor=0;
-                    int valor2=1;
-            while(rs.next()){
-                    
-                %>
-                <tr>
-                    <th scope="row"><%=rs.getString(1) %></th>
-                    <td class="text-center"><%=rs.getDouble(2) %></td>
-                    <td class="text-center">
-                        <a href="../IngresarSalaVentas?nombre_mueble=<%=rs.getString(1) %>&usuarioInicial=<%=usuarioInicial%>&decision=<%=valor%>&precio=<%=rs.getDouble(2)%>&id=<%=0%>"" class="btn btn-primary">Enviar Sala Ventas</a>
-                    </td>
-                    
-                </tr>
-                <%
-                    }rs.close();
+                    st=cn.createStatement(); 
                     rs1=st.executeQuery("SELECT numero_ensamble,nombre_mueble,precio FROM ensamblar");
                     while(rs1.next()){
                 %>
@@ -75,7 +59,7 @@
                     <th scope="row"><%=rs1.getString(2) %></th>
                     <td class="text-center"><%=rs1.getDouble(3) %></td>
                     <td class="text-center">
-                        <a href="../IngresarSalaVentas?nombre_mueble=<%=rs1.getString(2) %>&usuarioInicial=<%=usuarioInicial%>&decision=<%=valor2%>&precio=<%=rs1.getDouble(3)%>&id=<%=rs1.getInt(1)%>"" class="btn btn-primary">Enviar Sala Ventas</a>
+                        <a href="../IngresarSalaVentas?nombre_mueble=<%=rs1.getString(2) %>&usuarioInicial=<%=usuarioInicial%>&precio=<%=rs1.getDouble(3)%>&id=<%=rs1.getInt(1)%>"" class="btn btn-primary">Enviar Sala Ventas</a>
                     </td>
                 </tr>
                 <%

@@ -53,10 +53,10 @@
             while(rs.next()){
                 %>
                 <tr>
-                    <th scope="row"><%=rs.getString(1) %></th>
-                    <td class="text-center"><%=rs.getDouble(2) %></td>
+                    <th scope="row"><%=rs.getString(2) %></th>
+                    <td class="text-center"><%=rs.getDouble(3) %></td>
                     <td class="text-center">
-                    <a href="vendiendo_mueble.jsp?mueble_venta=<%=rs.getString(1) %>&usuarioInicial=<%=usuarioInicial%>" class="btn btn-danger">Vender</a>
+                    <a href="vendiendo_mueble.jsp?mueble_venta=<%=rs.getString(2) %>?id=<%=rs.getInt(1) %>&usuarioInicial=<%=usuarioInicial%>&precio_llamar=<%=rs.getDouble(3)%>" class="btn btn-danger">Vender</a>
                     </td>
                 </tr>
                 <%
