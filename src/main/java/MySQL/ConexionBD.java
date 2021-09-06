@@ -14,8 +14,8 @@ import javax.swing.JOptionPane;
 public class ConexionBD {
     public Connection conexion(){
         String driver="com.mysql.cj.jdbc.Driver";
-        String usuario ="root";
-        String clave ="Ana1941";
+        String usuario ="muebleria";
+        String clave ="Mueble12345";
         String url="jdbc:mysql://localhost:3306/practica1progra2?useTimezone=true&serverTimezone=GMT-6&allowPublicKeyRetrieval=true&useSSL=false";
         Connection cn=null;
         try{

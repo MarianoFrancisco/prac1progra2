@@ -36,7 +36,6 @@ public class LoginServlet extends HttpServlet {
             try{
                 ConexionBD con = new ConexionBD();
                 cn = con.conexion();
-                JOptionPane.showMessageDialog(null, "Conectamos exitosamente a MySQL");
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Error conectar a MySQL"+e);
             }

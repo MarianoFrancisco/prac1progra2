@@ -35,6 +35,7 @@
             ResultSet rs=null;
         %> 
             <a class="btn btn-success btn-lg" href="ventas.jsp?usuarioInicial=<%=usuarioInicial%>">Regresar</a>
+            <a class="btn btn-success btn-lg" href="añadir_cliente.jsp?usuarioInicial=<%=usuarioInicial%>">Agregar Cliente</a>
             <br>        
             <br> 
         <table class="table table-bordered">
